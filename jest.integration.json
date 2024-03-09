@@ -1,0 +1,19 @@
+{
+  "rootDir": "src",
+  "testTimeout": 500000,
+  "testEnvironment": "node",
+  "testRegex": ".*\\.test\\.ts$",
+  "moduleFileExtensions": ["ts", "js", "json"],
+  "coverageDirectory": "../coverage/integration",
+  "moduleNameMapper": {
+    "src/(.*)": "<rootDir>/$1"
+  },
+  "transform": {
+    "^.+\\.tsx?$": "ts-jest"
+  },
+  "collectCoverageFrom": [
+    "**/*.service.ts",
+    "**/*.repository.ts",
+    "**/*.controller.ts"
+  ]
+}
