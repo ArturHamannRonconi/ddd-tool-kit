@@ -1,17 +1,17 @@
 {
-  "name": "dddjs",
+  "name": "ddd-tool-kit",
   "version": "1.0.0",
   "license": "MIT",
   "main": "./lib/index.js",
   "author": "ArturHamannRonconi <arturhronconi@gmail.com>",
-  "repository": "git@github.com:ArturHamannRonconi/dddjs.git",
-  "homepage": "https://github.com/ArturHamannRonconi/dddjs#readme",
+  "repository": "git@github.com:ArturHamannRonconi/ddd-tool-kit.git",
+  "homepage": "https://github.com/ArturHamannRonconi/ddd-tool-kit#readme",
   "description": "A development tool kit for using Domain Driven Design in your Web API Node.js",
   "bugs": {
-    "url": "https://github.com/ArturHamannRonconi/dddjs/issues"
+    "url": "https://github.com/ArturHamannRonconi/ddd-tool-kit/issues"
   },
   "keywords": [
-    "dddjs",
+    "ddd-tool-kit",
     "ddd",
     "Domain",
     "Driven",
