@@ -1,13 +1,13 @@
-import { INVALID_DATE } from "src/implementations/value-objects/date/date.errors";
-import { DateValueObject } from "src/implementations/value-objects/date/date.value-object";
+import { INVALID_DATE } from 'src/implementations/value-objects/date/date.errors';
+import { DateValueObject } from 'src/implementations/value-objects/date/date.value-object';
 
-describe("date.value-object.spec", () => {
-  it("should be defined a new date", () => {
+describe('date.value-object.spec', () => {
+  it('should be defined a new date', () => {
     const valueObject = DateValueObject.getDefault();
     expect(valueObject.value).toBeInstanceOf(Date);
   });
 
-  it("should be fail to init some date", () => {
+  it('should be fail to init some date', () => {
     const initDate = DateValueObject.init({
       value: { isDate: false } as unknown as Date,
     });
@@ -16,7 +16,7 @@ describe("date.value-object.spec", () => {
     expect(initDate.result).toEqual(INVALID_DATE);
   });
 
-  it("should be sanitize numbers to date", () => {
+  it('should be sanitize numbers to date', () => {
     const initDate = DateValueObject.init({
       value: 4984092 as unknown as Date,
     });
@@ -25,7 +25,7 @@ describe("date.value-object.spec", () => {
     expect(initDate.result).toBeInstanceOf(DateValueObject);
   });
 
-  it("should verify is same day true", () => {
+  it('should verify is same day true', () => {
     const date1 = DateValueObject.getDefault();
     const date2 = DateValueObject.getDefault();
 
@@ -33,7 +33,7 @@ describe("date.value-object.spec", () => {
     expect(date1.isSameDay(date1)).toBeTruthy();
   });
 
-  it("should verify is same day true", () => {
+  it('should verify is same day true', () => {
     const today = new Date();
     const tomorrowDayNumber = today.getDate() + 1;
 
@@ -52,7 +52,7 @@ describe("date.value-object.spec", () => {
     expect(isSameDay).toBeFalsy();
   });
 
-  it("should be add one days for today", () => {
+  it('should be add one days for today', () => {
     const today = DateValueObject.getDefault();
     const tomorrow = DateValueObject.getDefault();
 
@@ -63,7 +63,7 @@ describe("date.value-object.spec", () => {
     expect(today.isSameDay(tomorrow)).toBeFalsy();
   });
 
-  it("should be difference in days is 1", () => {
+  it('should be difference in days is 1', () => {
     const differenceInDays = 1;
     const today = DateValueObject.getDefault();
     const tomorrow = DateValueObject.getDefault();

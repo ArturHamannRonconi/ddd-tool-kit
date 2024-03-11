@@ -1,5 +1,5 @@
-import { Aggregate } from "src/abstract/aggregate/aggregate.abstract";
-import { IdValueObject } from "src/implementations/value-objects/id/id.value-object";
+import { Aggregate } from 'src/abstract/aggregate/aggregate.abstract';
+import { IdValueObject } from 'src/implementations/value-objects/id/id.value-object';
 
 export interface List<T> {
   items: T[];

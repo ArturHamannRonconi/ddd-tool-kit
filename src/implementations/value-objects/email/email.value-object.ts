@@ -1,9 +1,9 @@
-import { isEmail } from "class-validator";
+import { isEmail } from 'class-validator';
 
-import { Output } from "src/utils/output/output.util";
-import { ValueObject } from "src/abstract/value-object/value-object.abstract";
-import { IEmailProps } from "src/implementations/value-objects/email/email.props";
-import { INVALID_EMAIL } from "src/implementations/value-objects/email/email.errors";
+import { Output } from 'src/utils/output/output.util';
+import { ValueObject } from 'src/abstract/value-object/value-object.abstract';
+import { IEmailProps } from 'src/implementations/value-objects/email/email.props';
+import { INVALID_EMAIL } from 'src/implementations/value-objects/email/email.errors';
 
 export class EmailValueObject extends ValueObject<IEmailProps> {
   protected sanitizeProps(): void {

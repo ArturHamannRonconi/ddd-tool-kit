@@ -1,11 +1,11 @@
-import { isIP } from "net";
+import { isIP } from 'net';
 
-import { Output } from "src/utils/output/output.util";
-import { IIpProps } from "src/implementations/value-objects/ip/ip.props";
-import { INVALID_IP } from "src/implementations/value-objects/ip/ip.errors";
-import { NONE, V4, V6 } from "src/utils/enums/ip-version.enum";
-import { PRIVATE, PUBLIC } from "src/utils/enums/ip-scoop.enum";
-import { ValueObject } from "src/abstract/value-object/value-object.abstract";
+import { Output } from 'src/utils/output/output.util';
+import { IIpProps } from 'src/implementations/value-objects/ip/ip.props';
+import { INVALID_IP } from 'src/implementations/value-objects/ip/ip.errors';
+import { NONE, V4, V6 } from 'src/utils/enums/ip-version.enum';
+import { PRIVATE, PUBLIC } from 'src/utils/enums/ip-scoop.enum';
+import { ValueObject } from 'src/abstract/value-object/value-object.abstract';
 
 export class IpValueObject extends ValueObject<IIpProps> {
   get version() {
@@ -16,7 +16,7 @@ export class IpValueObject extends ValueObject<IIpProps> {
     let isPrivateIp: boolean;
 
     if (this.isIPv4) {
-      const ipParts = this.value.split(".").map(Number);
+      const ipParts = this.value.split('.').map(Number);
       const ipNumber =
         ((ipParts[0] << 24) |
           (ipParts[1] << 16) |
@@ -38,12 +38,12 @@ export class IpValueObject extends ValueObject<IIpProps> {
       const normalizedIP = this.value.toLowerCase();
 
       const privateIPPrefixes = [
-        "::1", // Loopback
-        "fc00::", // ULA (Unique Local Address)
-        "fd00::", // ULA (Unique Local Address)
-        "fe80::", // Link-local unicast
-        "fec0::", // Site-local unicast (obsoleto)
-        "2001:db8::", // Documentação
+        '::1', // Loopback
+        'fc00::', // ULA (Unique Local Address)
+        'fd00::', // ULA (Unique Local Address)
+        'fe80::', // Link-local unicast
+        'fec0::', // Site-local unicast (obsoleto)
+        '2001:db8::', // Documentação
       ];
 
       // Checks if the IP starts with some prefixe of private IPs

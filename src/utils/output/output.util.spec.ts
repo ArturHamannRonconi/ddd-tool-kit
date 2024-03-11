@@ -1,8 +1,8 @@
-import { Output } from "src/utils/output/output.util";
-import { HttpStatus } from "src/utils/enums/http-status.enum";
+import { Output } from 'src/utils/output/output.util';
+import { HttpStatus } from 'src/utils/enums/http-status.enum';
 
-describe("output.util.spec", () => {
-  it("should be defined as success void", () => {
+describe('output.util.spec', () => {
+  it('should be defined as success void', () => {
     const util = Output.success();
 
     expect(util).toBeInstanceOf(Output);
@@ -11,7 +11,7 @@ describe("output.util.spec", () => {
     expect(util.isSuccess).toBeTruthy();
   });
 
-  it("should be defined as success boolean", () => {
+  it('should be defined as success boolean', () => {
     const util = Output.success(true);
 
     expect(util).toBeInstanceOf(Output);
@@ -20,7 +20,7 @@ describe("output.util.spec", () => {
     expect(util.isSuccess).toBeTruthy();
   });
 
-  it("should be defined as success number", () => {
+  it('should be defined as success number', () => {
     const util = Output.success(10);
 
     expect(util).toBeInstanceOf(Output);
@@ -29,16 +29,16 @@ describe("output.util.spec", () => {
     expect(util.isSuccess).toBeTruthy();
   });
 
-  it("should be defined as success string", () => {
-    const util = Output.success("Test");
+  it('should be defined as success string', () => {
+    const util = Output.success('Test');
 
     expect(util).toBeInstanceOf(Output);
-    expect(util.result).toBe("Test");
+    expect(util.result).toBe('Test');
     expect(util.isFailure).toBeFalsy();
     expect(util.isSuccess).toBeTruthy();
   });
 
-  it("should be defined as success Object", () => {
+  it('should be defined as success Object', () => {
     const util = Output.success({});
 
     expect(util).toBeInstanceOf(Output);
@@ -47,9 +47,9 @@ describe("output.util.spec", () => {
     expect(util.isSuccess).toBeTruthy();
   });
 
-  it("should be defined as fail erro-message", () => {
+  it('should be defined as fail erro-message', () => {
     const util = Output.fail({
-      message: "invalid",
+      message: 'invalid',
       statusCode: HttpStatus.BAD_REQUEST,
     });
 
@@ -57,7 +57,7 @@ describe("output.util.spec", () => {
     expect(util.isFailure).toBeTruthy();
     expect(util.isSuccess).toBeFalsy();
     expect(util.result).toEqual({
-      message: "invalid",
+      message: 'invalid',
       statusCode: HttpStatus.BAD_REQUEST,
     });
   });

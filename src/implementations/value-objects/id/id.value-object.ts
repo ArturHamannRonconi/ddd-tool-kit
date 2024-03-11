@@ -1,9 +1,9 @@
-import { uid } from "uid";
+import { uid } from 'uid';
 
-import { Output } from "src/utils/output/output.util";
-import { IdProps } from "src/implementations/value-objects/id/id.props";
-import { INVALID_ID } from "src/implementations/value-objects/id/id.errors";
-import { ValueObject } from "src/abstract/value-object/value-object.abstract";
+import { Output } from 'src/utils/output/output.util';
+import { IdProps } from 'src/implementations/value-objects/id/id.props';
+import { INVALID_ID } from 'src/implementations/value-objects/id/id.errors';
+import { ValueObject } from 'src/abstract/value-object/value-object.abstract';
 
 export class IdValueObject extends ValueObject<IdProps> {
   equals(domainId: IdValueObject) {

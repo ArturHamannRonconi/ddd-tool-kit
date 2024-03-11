@@ -1,9 +1,9 @@
-import { toDate, addDays, differenceInDays, isSameDay } from "date-fns";
+import { toDate, addDays, differenceInDays, isSameDay } from 'date-fns';
 
-import { Output } from "src/utils/output/output.util";
-import { IDateProps } from "src/implementations/value-objects/date/date.props";
-import { INVALID_DATE } from "src/implementations/value-objects/date/date.errors";
-import { ValueObject } from "src/abstract/value-object/value-object.abstract";
+import { Output } from 'src/utils/output/output.util';
+import { IDateProps } from 'src/implementations/value-objects/date/date.props';
+import { INVALID_DATE } from 'src/implementations/value-objects/date/date.errors';
+import { ValueObject } from 'src/abstract/value-object/value-object.abstract';
 
 export class DateValueObject extends ValueObject<IDateProps> {
   addDays(days: number) {

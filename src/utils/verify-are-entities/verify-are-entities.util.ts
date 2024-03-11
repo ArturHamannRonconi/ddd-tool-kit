@@ -1,6 +1,6 @@
-import { isArray } from "class-validator";
+import { isArray } from 'class-validator';
 
-import { Entity } from "src/abstract/entity/entity.abstract";
+import { Entity } from 'src/abstract/entity/entity.abstract';
 
 export const verifyAreEntities = <T extends Entity<any>>(
   propNames: string[],

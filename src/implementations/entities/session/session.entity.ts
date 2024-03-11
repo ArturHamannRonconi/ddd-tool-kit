@@ -1,14 +1,14 @@
-import { Output } from "src/utils/output/output.util";
-import { Entity } from "src/abstract/entity/entity.abstract";
-import { IError } from "src/interfaces/error-message.interface";
-import { ISessionProps } from "src/implementations/entities/session/session.props";
-import { IdValueObject } from "src/implementations/value-objects/id/id.value-object";
-import { IpValueObject } from "src/implementations/value-objects/ip/ip.value-object";
-import { throwFailOutput } from "src/utils/throw-fail-output/throw-fail-output.util";
-import { INVALID_SESSION } from "src/implementations/entities/session/session.errors";
-import { DateValueObject } from "src/implementations/value-objects/date/date.value-object";
-import { verifyAllPropsExists } from "src/utils/verify-all-props-exists/verify-all-props-exists.util";
-import { verifyAreValueObjects } from "src/utils/verify-are-value-objects/verify-are-value-objects.util";
+import { Output } from 'src/utils/output/output.util';
+import { Entity } from 'src/abstract/entity/entity.abstract';
+import { IError } from 'src/interfaces/error-message.interface';
+import { ISessionProps } from 'src/implementations/entities/session/session.props';
+import { IdValueObject } from 'src/implementations/value-objects/id/id.value-object';
+import { IpValueObject } from 'src/implementations/value-objects/ip/ip.value-object';
+import { throwFailOutput } from 'src/utils/throw-fail-output/throw-fail-output.util';
+import { INVALID_SESSION } from 'src/implementations/entities/session/session.errors';
+import { DateValueObject } from 'src/implementations/value-objects/date/date.value-object';
+import { verifyAllPropsExists } from 'src/utils/verify-all-props-exists/verify-all-props-exists.util';
+import { verifyAreValueObjects } from 'src/utils/verify-are-value-objects/verify-are-value-objects.util';
 
 export class SessionEntity extends Entity<ISessionProps> {
   private readonly EXPIRATION_SESSION_IN_DAYS = 30;
@@ -53,7 +53,7 @@ export class SessionEntity extends Entity<ISessionProps> {
 
   protected sanitizeProps(): void {}
   protected isValidProps(): boolean {
-    const valueObjects = ["ip", "expiresAt", "loggedAt"];
+    const valueObjects = ['ip', 'expiresAt', 'loggedAt'];
 
     valueObjects.push(...this.defaultValueObjects);
 

@@ -1,5 +1,5 @@
-import { IOutputProps } from "src/utils/output/output.props";
-import { IError } from "src/interfaces/error-message.interface";
+import { IOutputProps } from 'src/utils/output/output.props';
+import { IError } from 'src/interfaces/error-message.interface';
 
 export class Output<S = IError> {
   private props: IOutputProps<S>;

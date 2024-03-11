@@ -1,20 +1,20 @@
-import { compareSync, genSaltSync, hashSync } from "bcryptjs";
+import { compareSync, genSaltSync, hashSync } from 'bcryptjs';
 
 import {
   INVALID_USER_PASSWORD,
   INVALID_INCORRECT_PASSWORD,
   INVALID_PASSWORD_IS_NOT_HASHED,
   INVALID_PASSWORD_ALREADY_HASHED,
-} from "src/implementations/value-objects/password/password.errors";
+} from 'src/implementations/value-objects/password/password.errors';
 
-import { Output } from "src/utils/output/output.util";
-import { IError } from "src/interfaces/error-message.interface";
-import { IPasswordProps } from "src/implementations/value-objects/password/password.props";
-import { ValueObject } from "src/abstract/value-object/value-object.abstract";
+import { Output } from 'src/utils/output/output.util';
+import { IError } from 'src/interfaces/error-message.interface';
+import { IPasswordProps } from 'src/implementations/value-objects/password/password.props';
+import { ValueObject } from 'src/abstract/value-object/value-object.abstract';
 
 export class PasswordValueObject extends ValueObject<IPasswordProps> {
   get isHashed() {
-    return this.value.includes("$2a$12") && this.value.length === 60;
+    return this.value.includes('$2a$12') && this.value.length === 60;
   }
 
   hash(): Output<IError> | Output<void> {
